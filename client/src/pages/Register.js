@@ -130,8 +130,7 @@ const Register = () => {
             <Typography variant="h6" sx={{ mb: 3 }}>
               Let's get to know you
             </Typography>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
                 <TextField
                   autoComplete="given-name"
                   name="firstName"
@@ -143,9 +142,7 @@ const Register = () => {
                   value={formData.firstName}
                   onChange={handleChange}
                 />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
+               <TextField
                   required
                   fullWidth
                   id="lastName"
@@ -155,8 +152,7 @@ const Register = () => {
                   value={formData.lastName}
                   onChange={handleChange}
                 />
-              </Grid>
-            </Grid>
+            </Box>
           </>
         );
       case 1:
@@ -371,6 +367,7 @@ const Register = () => {
       <Box
         sx={{
           flex: 1,
+         
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -420,7 +417,7 @@ const Register = () => {
                   startIcon={<ArrowBackIcon />}
                   sx={{ visibility: activeStep === 0 ? "hidden" : "visible" }}
                 >
-                  Back
+                  Back 
                 </Button>
                 <Button
                   type="submit"
